@@ -65,7 +65,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY php.ini /etc/php/8.4/cli/conf.d/99-sail.ini
 RUN chmod +x /usr/local/bin/start-container
 
-RUN chmod 777 /storage -R 
+RUN chmod 777 storage -R 
 
 
 EXPOSE 80/tcp
