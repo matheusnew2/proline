@@ -14,3 +14,4 @@ RUN docker-php-ext-enable pcntl
 
 
 COPY horizon.conf /etc/supervisor/conf.d/horizon.conf
+RUN chmod 777 /storage -R 
