@@ -10,6 +10,7 @@ services:
             - sail
         depends_on:
           - redis
+          - mysql
     laravel.test:
         build:
             context: './docker/8.4'
