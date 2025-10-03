@@ -16,7 +16,7 @@ class JobHelper
             if(!class_exists("\\App\Models\\{$table}"))
                 return false;
 
-            $jsonFile = Storage::json($upload->file_path);
+            $jsonFile = Storage::disk('local')->json($upload->file_path);
             if(empty($jsonFile[$table]))
             {
                 return false;
