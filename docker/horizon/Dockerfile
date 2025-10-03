@@ -22,4 +22,4 @@ COPY . .
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R ug+rwx /var/www/html/storage /var/www/html/bootstrap/cache
 
-COPY horizon.conf /etc/supervisor/conf.d/horizon.conf
+COPY ./docker/horizon/horizon.conf /etc/supervisor/conf.d/horizon.conf
