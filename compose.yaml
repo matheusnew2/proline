@@ -1,8 +1,8 @@
 services:
     horizon:
         build:
-          context: './docker/horizon'
-          dockerfile: Dockerfile
+          context: '.'
+          dockerfile: ./docker/horizon/Dockerfile
         volumes:
           - .:/var/www/html
         command: supervisord -n -c /etc/supervisor/conf.d/horizon.conf
@@ -36,6 +36,7 @@ services:
         depends_on:
             - mysql
             - redis
+            - horizon
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
