@@ -8,7 +8,7 @@ const actualBatch = ref('');
 getBatches();
 setInterval(async () => {
      getBatches();
-   }, 1500);
+   }, 3000);
 function getBatches(){
 
     http.get('/uploads')

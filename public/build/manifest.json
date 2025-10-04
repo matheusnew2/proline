@@ -4,7 +4,7 @@
     "name": "http"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CgahLliy.css",
+    "file": "assets/app-_2iFcXlr.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
@@ -12,7 +12,7 @@
     ]
   },
   "resources/js/src/main.js": {
-    "file": "assets/main-B6EDuozy.js",
+    "file": "assets/main-DKFl5z_J.js",
     "name": "main",
     "src": "resources/js/src/main.js",
     "isEntry": true,
@@ -22,7 +22,7 @@
     ]
   },
   "resources/js/src/views/EnvioView.vue": {
-    "file": "assets/EnvioView-PKr-Kxz8.js",
+    "file": "assets/EnvioView-vj9Pc-M_.js",
     "name": "EnvioView",
     "src": "resources/js/src/views/EnvioView.vue",
     "isDynamicEntry": true,
@@ -32,7 +32,7 @@
     ]
   },
   "resources/js/src/views/ListagemEnvios.vue": {
-    "file": "assets/ListagemEnvios-5xjeilz0.js",
+    "file": "assets/ListagemEnvios-mAGFn9GG.js",
     "name": "ListagemEnvios",
     "src": "resources/js/src/views/ListagemEnvios.vue",
     "isDynamicEntry": true,
