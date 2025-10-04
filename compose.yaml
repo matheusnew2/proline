@@ -3,6 +3,8 @@ services:
         build:
           context: '.'
           dockerfile: ./docker/horizon/Dockerfile
+          args:
+                WWWGROUP: '${WWWGROUP}'
         volumes:
           - ./storage/app/private/:/var/www/html/storage/app/private
         command: supervisord -n -c /etc/supervisor/conf.d/horizon.conf
