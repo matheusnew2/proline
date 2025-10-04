@@ -11,8 +11,10 @@ RUN apk add  pcre-dev $PHPIZE_DEPS \
 RUN docker-php-ext-install pcntl pdo pdo_mysql mbstring  
 RUN docker-php-ext-enable pcntl
 
+COPY --chown=www-data:www-data . /var/www/html
 
 WORKDIR /var/www/html
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 RUN composer install
@@ -23,10 +25,9 @@ RUN apk add --no-cache bash && \
 
 
 COPY ./docker/horizon/horizon.conf /etc/supervisor/conf.d/horizon.conf
-COPY ./docker/horizon/start-container /usr/local/bin/start-container
 
-RUN chown -R sail /var/www/html/storage /var/www/html/bootstrap/cache \
+
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R ug+rwx /var/www/html/storage /var/www/html/bootstrap/cache
 
 
-ENTRYPOINT ["start-container"]
