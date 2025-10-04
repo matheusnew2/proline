@@ -17,8 +17,16 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 RUN composer install
 
-RUN groupadd --force -g $WWWGROUP sail
-RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
-RUN git config --global --add safe.directory /var/www/html
+RUN apk add --no-cache bash && \
+    addgroup -g $WWWGROUP sail && \
+    adduser -D -u 1337 -G sail -s /bin/bash sail
+
 
 COPY ./docker/horizon/horizon.conf /etc/supervisor/conf.d/horizon.conf
+COPY ./docker/horizon/start-container /usr/local/bin/start-container
+
+RUN chown -R sail /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R ug+rwx /var/www/html/storage /var/www/html/bootstrap/cache
+
+
+ENTRYPOINT ["start-container"]
