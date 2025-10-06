@@ -1,0 +1,44 @@
+{
+  "_http-pf5UM4Pc.js": {
+    "file": "assets/http-pf5UM4Pc.js",
+    "name": "http"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-_2iFcXlr.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/src/main.js": {
+    "file": "assets/main-DKFl5z_J.js",
+    "name": "main",
+    "src": "resources/js/src/main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/src/views/EnvioView.vue",
+      "resources/js/src/views/ListagemEnvios.vue"
+    ]
+  },
+  "resources/js/src/views/EnvioView.vue": {
+    "file": "assets/EnvioView-vj9Pc-M_.js",
+    "name": "EnvioView",
+    "src": "resources/js/src/views/EnvioView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/src/main.js",
+      "_http-pf5UM4Pc.js"
+    ]
+  },
+  "resources/js/src/views/ListagemEnvios.vue": {
+    "file": "assets/ListagemEnvios-mAGFn9GG.js",
+    "name": "ListagemEnvios",
+    "src": "resources/js/src/views/ListagemEnvios.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/src/main.js",
+      "_http-pf5UM4Pc.js"
+    ]
+  }
+}
